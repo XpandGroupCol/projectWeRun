@@ -3,19 +3,20 @@ const { name, src, link } = Astro.props;
 ---
 
 <a
-  class="bg-black rounded-full w-full px-[25px] xxs:pb-4 pt-[18px] xxs:leading-8 py-1.5 md:py-4 lg:py-[14px] lg:px-[34px] hover:bg-white h-auto flex justify-center items-center
+  class="bg-black rounded-full w-full px-[25px] xxs:pb-4 pt-[16px] xxs:leading-8 py-1.5 md:py-4 lg:py-[14px] lg:px-[34px] hover:bg-white h-auto flex justify-center items-center
   leading-8 hover:text-black"
   href={link}
   target="_blank"
   rel="noopener noreferrer"
 >
-  <span
-    class="flex text-[18px] xxs:text-[21px] items-center m-auto  font-PalatinoNova gap-3 lg:text-[30px] text-center"
+  <div
+    class="flex items-center justify-center text-[18px] xxs:leading-[4px]  m-auto  font-PalatinoNova gap-3 lg:text-[30px] text-center "
     ><img
-      class="hover:filter hover:brightness-0 m-auto "
+      
       src={src}
       alt="IconWhatsapp"
     />
-    <span class="xxs:leading-4">{name}</span></span
+    <span class=" flex justify-center items-center xxs:pt-[2px] " >{name}</span></div
   >
 </a>
+
