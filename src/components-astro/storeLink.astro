@@ -1,0 +1,8 @@
+---
+const { name, src, link } = Astro.props;
+---
+
+  <a  class="bg-black rounded-full   px-[25px]  py-1.5 " href={link} target="_blank" rel="noopener noreferrer">
+     <span class="flex  items-center m-auto justify-center font-PalatinoNova gap-3 "><img src={src} alt="IconWhatsapp" /> <span class="xxs:leading-4">{name}</span></span>
+  </a>
+

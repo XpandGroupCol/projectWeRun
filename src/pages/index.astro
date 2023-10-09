@@ -1,0 +1,100 @@
+---
+import "../styles.css";
+import Carousel from "../components-react/carousel";
+import { IMAGESCAROUSEL, ICONS, LINKSTORE } from "../config/list";
+import Button from "../components-astro/button.astro";
+import Spotify from "../components-astro/spotify.astro";
+import IconLink from "../components-astro/iconLink.astro";
+import StoreLink from "../components-astro/storeLink.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+    <!-- ... Otros componentes y contenido ... -->
+
+    <script src="'../../spotifyInit.js" defer></script>
+    <script src="https://open.spotify.com/embed-podcast/iframe-api/v1" async
+    ></script>
+
+    <header>
+      <section
+        class="flex-col bg-header-image bg-cover bg-no-repeat bg-center h-[60vh] relative items-center justify-center"
+      >
+        <div class="flex-col justify-center items-center">
+          <Carousel client:only="react" images={IMAGESCAROUSEL} />
+        </div>
+        <div class="absolute bottom-[-18px] left-[50%] translate-x-[-50%]">
+          <Button text="¡Inscríbete al siguiente evento!" />
+        </div>
+      </section>
+    </header>
+    <main class="">
+      <section class="bg-fourth px-[30px] py-[50px]">
+        <div class="w-[100%] max-w-[450px] m-auto">
+          <div
+            class="flex max-w-[80%] m-auto justify-between items-center mb-[20px]"
+          >
+            {ICONS.map((icon) => <IconLink src={icon.src} link={icon.link} />)}
+          </div>
+
+          <Spotify />
+
+          <h2
+            class="text-[18px] font-UniversExtrablack text-primary text-center lg:text-[30px]"
+          >
+            JUNTOS, CREAMOS HISTORIAS DE ÉXITO EN CADA CARRERA
+          </h2>
+        </div>
+      </section>
+    </main>
+    <section class="bg-primary px-[30px] py-[30px] flex-col">
+      <div
+        class="flex flex-col pt-[32px] w-[100%] max-w-[450px] m-auto items-center"
+      >
+        <h2
+          class="text-[18px] font-UniversExtrablack text-center leading-[20px] lg:text-[30px] lg:leading-[34px]"
+        >
+          NUESTRAS LINEAS <span
+            class="text-[24px] lg:text-[40px] lg:leading-[34px]"
+            >DE CONTACTO</span
+          >
+        </h2>
+        <div
+          class="flex flex-col gap-[18px] pt-[28px] text-center w-[80%] text-primary"
+        >
+          {
+            LINKSTORE.map((store) => (
+              <StoreLink src={store.src} name={store.name} link={store.link} />
+            ))
+          }
+        </div>
+      </div>
+    </section>
+    <footer
+      class="flex flex-col bg-footer bg-cover bg-no-repeat bg-center h-[60vh]"
+    >
+      <Carousel client:only="react" images={IMAGESCAROUSEL} />
+      <div
+        class="flex flex-1 justify-center items-center w-[100%] max-w-[600px] px-[30px] m-auto"
+      >
+        <h2
+          class="text-[20px] font-UniversExtrablack text-center text-primary lg:text-[40px] lg:leading-[40px]"
+        >
+          EN PARCHE SE CORRE MEJOR
+        </h2>
+      </div>
+
+      <Carousel client:only="react" images={IMAGESCAROUSEL} />
+    </footer>
+    <section>
+      <div></div>
+    </section>
+  </body>
+</html>
