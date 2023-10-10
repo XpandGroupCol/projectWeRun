@@ -6,7 +6,6 @@ import Button from "../components-astro/button.astro";
 import Spotify from "../components-astro/spotify.astro";
 import IconLink from "../components-astro/iconLink.astro";
 import StoreLink from "../components-astro/storeLink.astro";
-
 ---
 
 <html lang="en">
@@ -26,7 +25,7 @@ import StoreLink from "../components-astro/storeLink.astro";
 
     <header>
       <section
-        class="flex-col  bg-header-image lg:bg-header-lg  bg-cover bg-no-repeat bg-center h-[60vh] relative items-center justify-center"
+        class="flex-col bg-header-image lg:bg-header-lg bg-cover bg-no-repeat bg-center h-[60vh] relative items-center justify-center"
       >
         <div class="flex-col justify-center items-center xxs:pt-[10px]">
           <Carousel client:only="react" images={IMAGESCAROUSEL} />
@@ -45,7 +44,7 @@ import StoreLink from "../components-astro/storeLink.astro";
             {ICONS.map((icon) => <IconLink src={icon.src} link={icon.link} />)}
           </div>
 
-          <Spotify/>
+          <Spotify />
 
           <h2
             class="text-[18px] font-UniversExtrablack text-primary text-center lg:text-[30px]"
@@ -63,16 +62,22 @@ import StoreLink from "../components-astro/storeLink.astro";
           class="text-[18px] xxs:text-[24px] font-UniversExtrablack text-center leading-[20px] lg:text-[30px] lg:leading-[34px]"
         >
           NUESTRAS LINEAS <span
-            class="text-[24px] xxs:text-[30px] xxs:leading-[34px]  lg:text-[40px] lg:leading-[34px]"
+            class="text-[24px] xxs:text-[30px] xxs:leading-[34px] lg:text-[40px] lg:leading-[34px]"
             >DE CONTACTO</span
           >
         </h2>
-        <div id="gato"
-          class="store-container flex relative hover:bg-transparent flex-col gap-[18px] pt-[28px] text-center w-[80%]  lg:h-auto lg:w-full text-primary justify-center items-center lg:px-[8px]  xxs:leading-[40px]"
+        <div
+          id="gato"
+          class="store-container flex relative hover:bg-transparent flex-col gap-[18px] pt-[28px] text-center w-[80%] lg:h-auto lg:w-full text-primary justify-center items-center lg:px-[8px] xxs:leading-[40px]"
         >
           {
             LINKSTORE.map((store) => (
-              <StoreLink src={store.src} src2={store.src2} name={store.name} link={store.link} />
+              <StoreLink
+                src={store.src}
+                src2={store.src2}
+                name={store.name}
+                link={store.link}
+              />
             ))
           }
         </div>
@@ -81,8 +86,9 @@ import StoreLink from "../components-astro/storeLink.astro";
     <footer
       class="flex flex-col bg-footer bg-cover bg-no-repeat bg-center h-[60vh]"
     >
-    
+   <div class="flex xxs:pt-[10px]">
       <Carousel client:only="react" images={IMAGESCAROUSEL} />
+    </div> 
       <div
         class="flex flex-1 justify-center items-center w-[100%] max-w-[600px] px-[30px] m-auto"
       >
@@ -92,8 +98,9 @@ import StoreLink from "../components-astro/storeLink.astro";
           EN PARCHE SE CORRE MEJOR
         </h2>
       </div>
-
+      <div class="flex xxs:pb-[10px]">
       <Carousel client:only="react" images={IMAGESCAROUSEL} />
+      </div>
     </footer>
     <section>
       <div></div>
