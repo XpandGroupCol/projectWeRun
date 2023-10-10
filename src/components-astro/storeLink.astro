@@ -1,8 +1,8 @@
 ---
-const { name, src, src2, link } = Astro.props;
+const {id, name, src, src2, link } = Astro.props;
 ---
-
-<a
+<button id={id}>
+<a 
   class="bg-black rounded-full w-full px-[24px] xxs:pb-4 pt-[16px] xxs:leading-8 py-1.5 md:py-4 lg:py-[14px] lg:px-[34px] hover:bg-white h-auto flex justify-center items-center
   leading-8 hover:text-black"
   href={link}
@@ -28,4 +28,5 @@ const { name, src, src2, link } = Astro.props;
     <span class=" flex justify-center items-center xxs:leading-5 xxs:pt-[3px] ] " >{name}</span></div
   >
 </a>
+</button>
 
