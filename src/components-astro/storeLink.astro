@@ -1,22 +1,31 @@
 ---
-const { name, src, link } = Astro.props;
+const { name, src, src2, link } = Astro.props;
 ---
 
 <a
-  class="bg-black rounded-full w-full px-[25px] xxs:pb-4 pt-[16px] xxs:leading-8 py-1.5 md:py-4 lg:py-[14px] lg:px-[34px] hover:bg-white h-auto flex justify-center items-center leading-8 hover:text-black"
+  class="bg-black rounded-full w-full px-[25px] xxs:pb-4 pt-[16px] xxs:leading-8 py-1.5 md:py-4 lg:py-[14px] lg:px-[34px] hover:bg-white h-auto flex justify-center items-center
+  leading-8 hover:text-black"
   href={link}
   target="_blank"
   rel="noopener noreferrer"
 >
-  <div
-    class="relative group flex items-center justify-center text-[18px] xxs:leading-[4px] m-auto font-PalatinoNova gap-3 lg:text-[30px] text-center"
+  <div 
+    class="flex items-center justify-center text-[18px] xxs:leading-[4px]  m-auto  font-PalatinoNova gap-3 lg:text-[30px] text-center "
+    >
+    <img class="logo-verde transition-opacity "
+      
+    src={src}
+    alt="logo-wpp-verde"
+   
+  />
+  <img class="logo-negro opacity-0 transition-opacity"
+      
+    src={src2}
+    alt="logo-wpp-negro"
+   
+  />
+    
+    <span class=" flex justify-center items-center xxs:leading-5 ] " >{name}</span></div
   >
-    <img
-      class="absolute inset-0 w-full h-full object-cover"
-      src={src}
-      alt="IconWhatsapp"
-    />
-    <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-100"></div>
-    <span class="z-10 flex justify-center items-center xxs:pt-[4px]">{name}</span>
-  </div>
 </a>
+
