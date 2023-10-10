@@ -19,13 +19,6 @@ import StoreLink from "../components-astro/storeLink.astro";
   <body>
     <!-- ... Otros componentes y contenido ... -->
 
-  
-    <script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
-    <script src="../../spotifyInit.js" defer></script>
-   
-
-
-
     <header>
       <section
         class="flex-col bg-header-image lg:bg-header-lg bg-cover bg-no-repeat bg-center h-[60vh] relative items-center justify-center"
@@ -47,7 +40,7 @@ import StoreLink from "../components-astro/storeLink.astro";
             {ICONS.map((icon) => <IconLink src={icon.src} link={icon.link} />)}
           </div>
 
-          <Spotify/>
+          <Spotify />
 
           <h2
             class="text-[18px] font-UniversExtrablack text-primary text-center lg:text-[30px]"
@@ -89,9 +82,9 @@ import StoreLink from "../components-astro/storeLink.astro";
     <footer
       class="flex flex-col bg-footer bg-cover bg-no-repeat bg-center h-[60vh]"
     >
-   <div class="flex xxs:pt-[10px]">
-      <Carousel client:only="react" images={IMAGESCAROUSEL} />
-    </div> 
+      <div class="flex xxs:pt-[10px]">
+        <Carousel client:only="react" images={IMAGESCAROUSEL} />
+      </div>
       <div
         class="flex flex-1 justify-center items-center w-[100%] max-w-[600px] px-[30px] m-auto"
       >
@@ -102,7 +95,7 @@ import StoreLink from "../components-astro/storeLink.astro";
         </h2>
       </div>
       <div class="flex xxs:pb-[10px]">
-      <Carousel client:only="react" images={IMAGESCAROUSEL} />
+        <Carousel client:only="react" images={IMAGESCAROUSEL} />
       </div>
     </footer>
     <section>
