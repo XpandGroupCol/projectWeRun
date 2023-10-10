@@ -18,3 +18,10 @@
     }
   
 }
+.store-container:hover .logo-verde {
+    opacity: 0 !important;
+  }
+  
+  .store-container:hover .logo-negro {
+    opacity: 1 !important;
+  }
