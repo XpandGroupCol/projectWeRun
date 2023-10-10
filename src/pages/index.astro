@@ -19,9 +19,12 @@ import StoreLink from "../components-astro/storeLink.astro";
   <body>
     <!-- ... Otros componentes y contenido ... -->
 
-    <script src="'../../spotifyInit.js" defer></script>
-    <script src="https://open.spotify.com/embed-podcast/iframe-api/v1" async
-    ></script>
+  
+    <script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
+    <script src="../../spotifyInit.js" defer></script>
+   
+
+
 
     <header>
       <section
@@ -44,7 +47,7 @@ import StoreLink from "../components-astro/storeLink.astro";
             {ICONS.map((icon) => <IconLink src={icon.src} link={icon.link} />)}
           </div>
 
-          <Spotify />
+          <Spotify/>
 
           <h2
             class="text-[18px] font-UniversExtrablack text-primary text-center lg:text-[30px]"
