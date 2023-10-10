@@ -19,9 +19,9 @@
   
 }
 .store-container:hover .logo-verde {
-    opacity: 0 !important;
+display: none;
   }
   
   .store-container:hover .logo-negro {
-    opacity: 1 !important;
+    display: flex;
   }
