@@ -1,5 +1,5 @@
 ---
-const { name, src, link } = Astro.props;
+const { name, src, src2, link } = Astro.props;
 ---
 
 <a
@@ -11,11 +11,14 @@ const { name, src, link } = Astro.props;
 >
   <div
     class="flex items-center justify-center text-[18px] xxs:leading-[4px]  m-auto  font-PalatinoNova gap-3 lg:text-[30px] text-center "
-    ><img
+    >
+    <img
       
-      src={src}
-      alt="IconWhatsapp"
-    />
+    src={src}
+    alt="logo-wpp-verde"
+   
+  />
+    
     <span class=" flex justify-center items-center xxs:pt-[4px] " >{name}</span></div
   >
 </a>

@@ -13,22 +13,26 @@ export const ICONS = [
   {
     name: "instagram",
     src: "instagram.svg",
+    src2: "wppblack.svg",
     link: "https://www.instagram.com/proyectowerun/",
   },
   {
     name: "tiktok",
     src: "tiktok.svg",
+    src2: "wppblack.svg",
     link: "https://www.tiktok.com/@proyectowerun",
   },
   {
     name: "spotify",
     src: "spotify.svg",
+    src2: "wppblack.svg",
     link: "https://open.spotify.com/show/0yXt7UtjjX9GyccFwfaVLp?si=64a932bf85d14016&nd=1",
   },
 
   {
     name: "youtube",
     src: "youtube.svg",
+    src2: "wppblack.svg",
     link: "https://www.youtube.com/@ProyectoWeRun",
   },
 ];

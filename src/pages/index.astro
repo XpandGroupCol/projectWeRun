@@ -6,6 +6,7 @@ import Button from "../components-astro/button.astro";
 import Spotify from "../components-astro/spotify.astro";
 import IconLink from "../components-astro/iconLink.astro";
 import StoreLink from "../components-astro/storeLink.astro";
+
 ---
 
 <html lang="en">
@@ -44,7 +45,7 @@ import StoreLink from "../components-astro/storeLink.astro";
             {ICONS.map((icon) => <IconLink src={icon.src} link={icon.link} />)}
           </div>
 
-          <Spotify />
+          <Spotify/>
 
           <h2
             class="text-[18px] font-UniversExtrablack text-primary text-center lg:text-[30px]"
@@ -71,7 +72,7 @@ import StoreLink from "../components-astro/storeLink.astro";
         >
           {
             LINKSTORE.map((store) => (
-              <StoreLink src={store.src} name={store.name} link={store.link} />
+              <StoreLink src={store.src} src2={store.src2} name={store.name} link={store.link} />
             ))
           }
         </div>
