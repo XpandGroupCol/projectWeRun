@@ -21,7 +21,7 @@ import StoreLink from "../components-astro/storeLink.astro";
 
     <header>
       <section
-        class="flex-col bg-header-image lg:bg-header-lg bg-cover bg-no-repeat bg-center h-[60vh] relative items-center justify-center"
+        class="flex-col bg-header-image lg:bg-header-lg bg-cover bg-no-repeat bg-center h-[60vh] min-h-[350px] relative items-center justify-center"
       >
         <div class="flex-col justify-center items-center xxs:pt-[10px]">
           <Carousel client:only="react" images={IMAGESCAROUSEL} />
@@ -52,7 +52,7 @@ import StoreLink from "../components-astro/storeLink.astro";
     </main>
     <section class="bg-primary px-[30px] py-[30px] flex-col">
       <div
-        class="flex flex-col pt-[32px] w-[100%] xss:w-[80%] max-w-[450px] m-auto items-center"
+        class="flex flex-col py-[32px] w-[100%] xss:w-[80%] max-w-[450px] m-auto items-center"
       >
         <h2
           class="text-[18px] xxs:text-[24px] font-UniversExtrablack text-center leading-[20px] lg:text-[30px] lg:leading-[34px]"
@@ -81,7 +81,7 @@ import StoreLink from "../components-astro/storeLink.astro";
       </div>
     </section>
     <footer
-      class="flex flex-col bg-footer bg-cover bg-no-repeat bg-center h-[60vh]"
+      class="flex flex-col bg-footer bg-cover bg-no-repeat bg-center h-[60vh] min-h-[350px]"
     >
       <div class="flex xxs:pt-[10px]">
         <Carousel client:only="react" images={IMAGESCAROUSEL} />

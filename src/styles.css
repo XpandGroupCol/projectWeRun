@@ -20,8 +20,11 @@
 }
 .store-container:hover .logo-verde {
 display: none;
+transition-duration: 600ms;
   }
   
   .store-container:hover .logo-negro {
     display: flex;
+    transition-duration: 500ms;
+    
   }
