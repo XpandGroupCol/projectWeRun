@@ -52,13 +52,7 @@ export const LINKSTORE = [
     src2: "wppblack.svg",
     link: "https://api.whatsapp.com/send?phone=573208576389&text=%C2%A1Estoy%20interesado%20en%20productos%20NIKE!",
   },
-  {
-    id: "pereira-store",
-    name: "Nike Store Pereira",
-    src: "wpplogo.svg",
-    src2: "wppblack.svg",
-    link: "https://api.whatsapp.com/send?phone=573134786372&text=%C2%A1Estoy%20interesado%20en%20productos%20NIKE!",
-  },
+
   {
     id: "panama-store",
     name: "Nike Store Panamá",
