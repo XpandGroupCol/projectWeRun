@@ -1,12 +1,10 @@
 //Aqui coloco toda la info
 
 export const IMAGESCAROUSEL = [
-  { name: "iconogrande1", src: "iconogrande1.svg" },
-  { name: "iconogrande1", src: "iconogrande1.svg" },
-  { name: "iconogrande1", src: "iconogrande1.svg" },
-  { name: "iconogrande1", src: "iconogrande1.svg" },
-  { name: "iconogrande1", src: "iconogrande1.svg" },
-  { name: "iconogrande1", src: "iconogrande1.svg" },
+  { name: "iconogrande1", src: "logonike.png" },
+  { name: "iconogrande1", src: "logonike.png" },
+  { name: "iconogrande1", src: "logonike.png" },
+  { name: "iconogrande1", src: "logonike.png" },
 ];
 
 export const ICONS = [
@@ -40,7 +38,7 @@ export const LINKSTORE = [
   {
     id: "bogota-store",
     name: "Nike Store Bogotá",
-    src: "wpplogo.svg",
+    src: "wpwhite.svg",
     src2: "wppblack.svg",
     link: "https://api.whatsapp.com/send?phone=573212092394&text=%C2%A1Estoy%20interesado%20en%20productos%20NIKE!",
   },
@@ -48,7 +46,7 @@ export const LINKSTORE = [
   {
     id: "medellin-store",
     name: "Nike Store Medellín",
-    src: "wpplogo.svg",
+    src: "wpwhite.svg",
     src2: "wppblack.svg",
     link: "https://api.whatsapp.com/send?phone=573208576389&text=%C2%A1Estoy%20interesado%20en%20productos%20NIKE!",
   },
@@ -56,21 +54,21 @@ export const LINKSTORE = [
   {
     id: "panama-store",
     name: "Nike Store Panamá",
-    src: "wpplogo.svg",
+    src: "wpwhite.svg",
     src2: "wppblack.svg",
     link: "https://www.sportline.com.pa/marcas/nike.html",
   },
   {
     id: "guatemala-store",
     name: "Nike Store Guatemala",
-    src: "wpplogo.svg",
+    src: "wpwhite.svg",
     src2: "wppblack.svg",
     link: "https://api.whatsapp.com/send?phone=573134786372&text=%C2%A1Estoy%20interesado%20en%20productos%20NIKE!",
   },
   {
     id: "costarica-store",
     name: "Nike Store Costa Rica",
-    src: "wpplogo.svg",
+    src: "wpwhite.svg",
     src2: "wppblack.svg",
     link: "https://www.sportline.cr/marcas/nike.html",
   },

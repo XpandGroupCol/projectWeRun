@@ -2,31 +2,35 @@
 module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
+    screens: {
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1536px',
+    },
     extend: {
       fontFamily: {
-        PalatinoNova: "'Palatino Nova', serif",
-        UniversExtrablack: "'Univers Extrablack',serif",
+        nova: "'Palatino Nova', serif",
+        univers: "'Univers Extrablack',serif",
+        abc: ["ABC Monument Grotesk", "sans-serif"]
       },
       backgroundImage: {
-        "header-image": "url('/imagen1.webp')",
-        "footer": "url('/footer.webp')",
-        "header-lg": "url(/bgheader-lg.webp)"
-
+        "header": "url(/header.jpg)",
+        "footer": "url('/footer.jpg')",
+        "footer_md": "url('/footer_md.jpg')",
+        'gradient-radial': 'radial-gradient(circle, #822676 35%, #bf543b 60%, #d7aa53 90%)',
       },
 
       colors: {
-        primary: "#CFFF5E",
+        primary: "#7B258B",
         secondary: "#FFFFFF",
         third: "#000000",
         fourth: "#333333",
       },
       boxShadow: {
         custom: "0px 4px 4px 0px #0000004D",
-      },
-      screens: {
-        xs: "450px",
-        xxs: "320px",
-      }, 
+      }
     },
   },
   plugins: [],

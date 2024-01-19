@@ -1,32 +1,22 @@
 ---
-const {id, name, src, src2, link } = Astro.props;
+const { id, name, src, src2, link } = Astro.props;
 ---
-<button id={id} class="flex w-full">
-<a 
-  class=" bg-black rounded-full w-full px-[24px] xxs:pb-4 pt-[16px] xxs:leading-8 py-1.5 md:py-4 lg:py-[14px] lg:px-[34px] hover:bg-white h-auto flex justify-center items-center
-  leading-8 hover:text-black transition-colors duration-300 ease-in-out" 
-  href={link}
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <div 
-    class="flex items-center justify-center text-[18px] xxs:leading-[4px]  m-auto  font-PalatinoNova gap-3 lg:text-[30px] text-center "
-    >
-    <img class="logo-verde  "
-      
-    src={src}
-    alt="logo-wpp-verde"
-   
-  />
-  <img class="logo-negro hidden "
-      
-    src={src2}
-    alt="logo-wpp-negro"
-   
-  />
-    
-    <span class=" flex justify-center items-center xxs:leading-5 xxs:pt-[3px] ] " >{name}</span></div
-  >
-</a>
-</button>
 
+<button id={id} class="flex w-full">
+  <a
+    class="storelink bg-black rounded-full w-full
+    hover:bg-white h-auto flex justify-center items-center text-secondary hover:text-primary
+    leading-8 transition-colors duration-300 ease-in-out p-2" 
+    href={link}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <div
+      class="flex items-center justify-center text-[18px] m-auto gap-3 lg:text-[30px] text-center"    >
+      <img class="logo-wp" src={src} alt="logo-wpp-verde" />
+      <span class="flex justify-center items-center font-nova">
+        {name}
+      </span>
+    </div>
+  </a>
+</button>

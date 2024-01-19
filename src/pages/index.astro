@@ -17,20 +17,33 @@ import StoreLink from "../components-astro/storeLink.astro";
     <title>Astro</title>
     <!-- Google Tag Manager -->
     <script data-astro="raw">
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WBTC8C43');
-  </script><!-- Google Tag Manager -->
-
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-WBTC8C43");
+    </script><!-- Google Tag Manager -->
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WBTC8C43"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-WBTC8C43"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"></iframe></noscript
+    >
+    <!-- End Google Tag Manager (noscript) -->
     <!-- ... Otros componentes y contenido ... -->
 
     <header>
       <section
-        class="flex-col bg-header-image lg:bg-header-lg bg-cover bg-no-repeat bg-center h-[60vh] min-h-[350px] relative items-center justify-center"
+        class="flex-col bg-header bg-cover bg-no-repeat bg-center h-[60vh] min-h-[350px] relative items-center justify-center"
       >
         <div class="flex-col justify-center items-center xxs:pt-[10px]">
           <Carousel client:only="react" images={IMAGESCAROUSEL} />
@@ -41,44 +54,46 @@ import StoreLink from "../components-astro/storeLink.astro";
       </section>
     </header>
     <main class="">
-      <section class="bg-fourth px-[30px] py-[50px]">
+      <section class="bg-third px-[30px] py-[50px]">
         <div class="w-[100%] max-w-[450px] m-auto">
-          <div 
+          <div
             class="flex max-w-[80%] m-auto justify-between items-center mb-[20px]"
           >
-            {ICONS.map((icon) => <IconLink  src={icon.src} link={icon.link} />)}
+            {ICONS.map((icon) => <IconLink src={icon.src} link={icon.link} />)}
           </div>
 
           <Spotify />
-
           <h2
-            class="text-[18px] font-UniversExtrablack text-primary text-center lg:text-[30px]"
+            class="text-[18px] font-abc text-secondary text-center text-[2.5rem] leading-[2.5rem] md:hidden"
           >
-            JUNTOS, CREAMOS HISTORIAS DE ÉXITO EN CADA CARRERA
+            Juntos, creamos historias de éxito en cada carrera
+          </h2>
+          <h2
+            class="text-[18px] font-abc text-secondary text-center text-[2.5rem] leading-[2.5rem] hidden md:block"
+          >
+            Conoce la ubicación<br />de nuestras tiendas
           </h2>
         </div>
       </section>
     </main>
-    <section class="bg-primary px-[30px] py-[30px] flex-col">
+    <section class="bg-gradient-radial px-[30px] py-[30px] flex-col">
       <div
         class="flex flex-col py-[32px] w-[100%] xss:w-[80%] max-w-[450px] m-auto items-center"
       >
         <h2
-          class="text-[18px] xxs:text-[24px] font-UniversExtrablack text-center leading-[20px] lg:text-[30px] lg:leading-[34px]"
+          class="text-[18px] font-abc text-secondary text-center text-[2.5rem] leading-[2.5rem]"
         >
-          NUESTRAS LINEAS <span
-            class="text-[24px] xxs:text-[30px] xxs:leading-[34px] lg:text-[40px] lg:leading-[34px]"
-            >DE CONTACTO</span
-          >
+          Nuestras líneas<br />de contacto
         </h2>
         <div
-          id="gato"
-          class="store-container flex relative hover:bg-transparent flex-col gap-[18px] pt-[28px] text-center w-[80%] lg:h-auto lg:w-full text-primary justify-center items-center lg:px-[8px] xxs:leading-[40px]"
+          id="tiendas"
+          class="store-container flex relative hover:bg-transparent flex-col gap-[18px] pt-[28px]
+           text-center w-[80%] lg:h-auto lg:w-full text-primary justify-center items-center lg:px-[8px]"
         >
           {
             LINKSTORE.map((store) => (
               <StoreLink
-              id={store.id}
+                id={store.id}
                 src={store.src}
                 src2={store.src2}
                 name={store.name}
@@ -90,21 +105,19 @@ import StoreLink from "../components-astro/storeLink.astro";
       </div>
     </section>
     <footer
-      class="flex flex-col bg-footer bg-cover bg-no-repeat bg-center h-[60vh] min-h-[350px]"
+      class="flex flex-col bg-footer md:bg-footer_md bg-cover bg-no-repeat bg-top h-[60vh] min-h-[350px] lg:h-[80vh]"
     >
-      <div class="flex xxs:pt-[10px]">
+      <div class="flex">
         <Carousel client:only="react" images={IMAGESCAROUSEL} />
       </div>
       <div
-        class="flex flex-1 justify-center items-center w-[100%] max-w-[600px] px-[30px] m-auto"
+        class="flex flex-1 justify-center items-end w-[100%] max-w-[600px] px-[30px] m-auto"
       >
-        <h2
-          class="text-[20px] font-UniversExtrablack text-center text-primary lg:text-[40px] lg:leading-[40px]"
-        >
-          EN PARCHE SE CORRE MEJOR
-        </h2>
+        <div class="md:hidden">
+          <Button text="¡Únete a nuestra comunidad!" />
+        </div>
       </div>
-      <div class="flex xxs:pb-[10px]">
+      <div class="flex">
         <Carousel client:only="react" images={IMAGESCAROUSEL} />
       </div>
     </footer>
