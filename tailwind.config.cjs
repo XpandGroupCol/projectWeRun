@@ -16,9 +16,8 @@ module.exports = {
         abc: ["ABC Monument Grotesk", "sans-serif"]
       },
       backgroundImage: {
-        "header": "url(/header.jpg)",
-        "footer": "url('/footer.jpg')",
-        "footer_md": "url('/footer_md.jpg')",
+        "header": "linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(/header.webp)",
+        "footer": "linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url('/footer.webp')",
         'gradient-radial': 'radial-gradient(circle, #822676 35%, #bf543b 60%, #d7aa53 90%)',
       },
 
@@ -27,6 +26,12 @@ module.exports = {
         secondary: "#FFFFFF",
         third: "#000000",
         fourth: "#333333",
+        dialog: {
+          back: "#EAD3A0",
+          input: "#EFDFBF",
+          text: "#000000"
+        }
+
       },
       boxShadow: {
         custom: "0px 4px 4px 0px #0000004D",

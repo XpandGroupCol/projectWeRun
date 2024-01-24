@@ -1,11 +1,13 @@
 ---
 import "../styles.css";
 import Carousel from "../components-react/carousel";
+import Form from "../components-react/form";
 import { IMAGESCAROUSEL, ICONS, LINKSTORE } from "../config/list";
 import Button from "../components-astro/button.astro";
 import Spotify from "../components-astro/spotify.astro";
 import IconLink from "../components-astro/iconLink.astro";
 import StoreLink from "../components-astro/storeLink.astro";
+import Modal from "../components-astro/modal.astro";
 ---
 
 <html lang="en">
@@ -43,13 +45,17 @@ import StoreLink from "../components-astro/storeLink.astro";
 
     <header>
       <section
-        class="flex-col bg-header bg-cover bg-no-repeat bg-center h-[60vh] min-h-[350px] relative items-center justify-center"
+        class="flex-col bg-header bg-cover bg-no-repeat bg-top h-[60vh] md:h-[85vh] min-h-[450px]
+        relative items-center justify-center"
       >
-        <div class="flex-col justify-center items-center xxs:pt-[10px]">
+        <div class="flex-col justify-center items-center">
           <Carousel client:only="react" images={IMAGESCAROUSEL} />
         </div>
         <div class="absolute bottom-[-18px] left-[50%] translate-x-[-50%]">
-          <Button text="¡Inscríbete al siguiente evento!" />
+          <!-- <Button text="¡Inscríbete al siguiente evento!" /> -->
+          <Modal>
+            <!-- <button slot="close">Close modal</button> -->
+          </Modal>
         </div>
       </section>
     </header>
@@ -105,7 +111,7 @@ import StoreLink from "../components-astro/storeLink.astro";
       </div>
     </section>
     <footer
-      class="flex flex-col bg-footer md:bg-footer_md bg-cover bg-no-repeat bg-top h-[60vh] min-h-[350px] lg:h-[80vh]"
+      class="flex flex-col bg-footer bg-cover bg-no-repeat bg-top h-[60vh] min-h-[350px] lg:h-[80vh]"
     >
       <div class="flex">
         <Carousel client:only="react" images={IMAGESCAROUSEL} />

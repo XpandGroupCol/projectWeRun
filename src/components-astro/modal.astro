@@ -1,0 +1,37 @@
+---
+import Form from "../components-react/form";
+---
+
+<style>
+    dialog {
+        position: fixed;
+    }
+
+    dialog::backdrop {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(255, 0, 0, 0.1);
+    }
+</style>
+
+<button
+    onclick="{window.dialog.showModal()}"
+    class="flex justify-center items-center bg-primary text-secondary shadow-custom text-[1.2rem] md:text-[1.4rem] 2xl:text-[1.8rem]
+rounded-full h-auto font-abc w-auto whitespace-nowrap
+py-3 px-5 md:px-[3rem] md:py-3 2xl:px-[4rem] 2xl:py-4"
+    >¡Inscríbete al siguiente evento!
+</button>
+
+<dialog id=`dialog` class="min-w-[50%] rounded-xl bg-dialog-back">
+    <h1 class="text-center font-abc pt-2">Registrate en el evento</h1>
+    <Form client:load />
+    <form
+        method="dialog"
+        class="fixed top-0 right-0 m-2 p-2 bg-primary text-secondary rounded-full h-auto font-abc w-auto whitespace-nowrap"
+    >
+        <button class="py-[5px] px-[12px]">X</button>
+    </form>
+</dialog>

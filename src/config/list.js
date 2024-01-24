@@ -1,10 +1,10 @@
 //Aqui coloco toda la info
 
 export const IMAGESCAROUSEL = [
-  { name: "iconogrande1", src: "logonike.png" },
-  { name: "iconogrande1", src: "logonike.png" },
-  { name: "iconogrande1", src: "logonike.png" },
-  { name: "iconogrande1", src: "logonike.png" },
+  { name: "iconogrande1", src: "carrusel_blanco.svg" },
+  { name: "iconogrande1", src: "carrusel_blanco.svg" },
+  { name: "iconogrande1", src: "carrusel_blanco.svg" },
+  { name: "iconogrande1", src: "carrusel_blanco.svg" },
 ];
 
 export const ICONS = [
