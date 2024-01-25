@@ -1,21 +1,7 @@
-import { FormEvent, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from 'axios';
 
-const EventoCard = ({ nombre, fecha_hora, lugar, imagenUrl }) => {
-    return (
-        <div className="grid grid-cols-5 gap-0 rounded overflow-hidden shadow-lg bg-dialog-input p-2
-        items-center">
-            <img src={imagenUrl} alt={nombre} className="w-max-full h-48 object-contain" />
-            <div className="col-span-3 px-2 py-2">
-                <div className="font-bold text-xl mb-2">{nombre}</div>
-                <p className="text-gray-700 text-base mb-2">Fecha: {fecha_hora}</p>
-                <p className="text-gray-700 text-base">Lugar: {lugar}</p>
-            </div>
-        </div>
-    );
-};
-
-export default function Form() {
+export default function Form({ idEvento, changeEvent, nombreEvento }) {
     const [responseMessage, setResponseMessage] = useState("");
     const [listTipoSangre, setListTipoSangre] = useState([]);
     const [listGenero, setListGenero] = useState([]);
@@ -50,6 +36,7 @@ export default function Form() {
         console.log(event.target)
     }
     useEffect(() => {
+        console.log(idEvento)
         getListGenero()
         getListTipoSangre()
         getListPais()
@@ -100,19 +87,19 @@ export default function Form() {
             });
     }
 
-    const evento = {
-        nombre: 'Nombre del Evento',
-        fecha_hora: '2024-01-23',
-        lugar: 'Lugar del Evento',
-        imagenUrl: 'pais/CO.webp',
-    };
-
     return (
         <form onSubmit={submit}
             id="form_registro"
-            className="min-w-[50%] mx-auto bg-dialog-back p-6 rounded-md shadow-md font-abc"
+            className="min-w-[50%]  bg-dialog-back p-6 rounded-md shadow-md font-abc"
         >
-            <EventoCard {...evento} />
+            <h1 class="text-center font-abc pt-2">
+                Completa el formulario y tu inscripción estará lista para {nombreEvento}
+            </h1>
+
+            <button type="button" onClick={() => changeEvent(-1)}
+                className="w-[50%] bg-dialog-input text-dialog-text text-xs rounded-full py-2 px-4 
+                hover:bg-primary/80 focus:outline-none focus:bg-primary mb-4">
+                Cambiar de evento</button>
 
             <div className="mb-4">
                 <label htmlFor="cedula" className="block text-dialog-text font-semibold mb-2"
@@ -212,6 +199,34 @@ export default function Form() {
                     value={formData.eps}
                     onChange={handleChange}
                 />
+            </div>
+
+            <div className="mb-4">
+                <label htmlFor="id_genero" className="block text-dialog-text font-semibold mb-2"
+                >Género</label>
+                <select
+                    id="id_genero"
+                    name="id_genero"
+                    className="w-full px-4 py-2 border rounded-md focus:outline-none 
+                    focus:border-third color-dialog-text bg-dialog-input"
+                    value={formData.id_genero}
+                    onChange={handleChange}
+                >
+                    {listGenero.map(genero => {
+                        let valor = "Prefiero No Decirlo"
+                        switch (genero.id) {
+                            case 1:
+                                valor = "Masculino"
+                                break
+                            case 2:
+                                valor = "Femenino"
+                                break
+                            default:
+                                valor = "Prefiero No Decirlo"
+                        }
+                        return <option value={genero.id}>{valor}</option>
+                    })}
+                </select>
             </div>
 
             <div className="mb-4">

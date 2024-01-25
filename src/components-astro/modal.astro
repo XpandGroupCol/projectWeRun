@@ -1,5 +1,7 @@
 ---
-import Form from "../components-react/form";
+import Form from "../components-react/Form";
+import ListEventos from "../components-react/ListEventos";
+import DivDialog from "../components-react/DivDialog";
 ---
 
 <style>
@@ -26,8 +28,9 @@ py-3 px-5 md:px-[3rem] md:py-3 2xl:px-[4rem] 2xl:py-4"
 </button>
 
 <dialog id=`dialog` class="min-w-[50%] rounded-xl bg-dialog-back">
-    <h1 class="text-center font-abc pt-2">Registrate en el evento</h1>
-    <Form client:load />
+
+    <!-- <Form client:load /> -->
+    <DivDialog client:load />
     <form
         method="dialog"
         class="fixed top-0 right-0 m-2 p-2 bg-primary text-secondary rounded-full h-auto font-abc w-auto whitespace-nowrap"

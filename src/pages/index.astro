@@ -1,7 +1,7 @@
 ---
 import "../styles.css";
 import Carousel from "../components-react/carousel";
-import Form from "../components-react/form";
+import Form from "../components-react/Form";
 import { IMAGESCAROUSEL, ICONS, LINKSTORE } from "../config/list";
 import Button from "../components-astro/button.astro";
 import Spotify from "../components-astro/spotify.astro";
@@ -52,10 +52,7 @@ import Modal from "../components-astro/modal.astro";
           <Carousel client:only="react" images={IMAGESCAROUSEL} />
         </div>
         <div class="absolute bottom-[-18px] left-[50%] translate-x-[-50%]">
-          <!-- <Button text="¡Inscríbete al siguiente evento!" /> -->
-          <Modal>
-            <!-- <button slot="close">Close modal</button> -->
-          </Modal>
+          <Modal />
         </div>
       </section>
     </header>
