@@ -18,7 +18,6 @@ export default function ListEventos({ changeEvent, changeNombre }) {
     const getListPais = async () => {
         await axios.get('http://localhost:3001/pais/activos')
             .then(response => {
-                console.log(response.data)
                 setLisPais(response.data)
             })
             .catch(error => {
@@ -29,7 +28,6 @@ export default function ListEventos({ changeEvent, changeNombre }) {
     const getListEventosActivos = async () => {
         await axios.get('http://localhost:3001/evento/activos')
             .then(response => {
-                console.log(response.data)
                 setListEvento(response.data)
             })
             .catch(error => {
@@ -45,20 +43,24 @@ export default function ListEventos({ changeEvent, changeNombre }) {
             <h3 className="text-center font-abc pt-2">
                 Selecciona el evento al cual quieres asistir
             </h3>
-            {listEvento.map(evento => {
-                const banderaPais = listPais.find(pais => pais.id === evento.id_pais)
-                evento.bandera = banderaPais.iniciales
-                return (
-                    <div key={evento.id}
-                        onClick={() => {
-                            changeEvent(evento.id)
-                            changeNombre(evento.nombre)
-                        }} >
-                        <EventoCard {...evento} />
-                    </div>
-                )
-            }
-            )}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
+                {listEvento.map(evento => {
+                    const banderaPais = listPais.find(pais => pais.id === evento.id_pais)
+                    evento.bandera = banderaPais.iniciales
+                    return (
+                        <div key={evento.id}
+                            onClick={() => {
+                                if (evento.id_estado === 1) {
+                                    changeEvent(evento.id)
+                                    changeNombre(evento.nombre)
+                                }
+                            }} >
+                            <EventoCard {...evento} />
+                        </div>
+                    )
+                }
+                )}
+            </div>
         </div>
     )
 }
