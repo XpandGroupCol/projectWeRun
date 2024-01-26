@@ -36,7 +36,7 @@ export default function ListEventos({ changeEvent, changeNombre }) {
     }
 
     return (
-        <div className="min-w-[50%] bg-dialog-back p-6 rounded-md shadow-md font-abc grid gap-2">
+        <div className="min-w-[50%] bg-dialog-back p-6 rounded-md font-abc grid gap-2">
             <h1 className="text-center font-abc pt-2">
                 ESCOGE TU EVENTO
             </h1>

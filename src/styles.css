@@ -7,20 +7,34 @@
   @font-face {
     font-family: "Palatino Nova";
     src: url("/fonts/palatino-nova-regular.ttf") format("opentype");
-    /* font-weight: 400; */
-
   }
 
   @font-face {
     font-family: "Univers Extrablack";
     src: url("/fonts/univers-nextpro-extrablack Extended.ttf") format("opentype");
-    /* font-weight: 700; */
   }
 
   @font-face {
     font-family: "ABC Monument Grotesk";
     src: url("/fonts/ABCMonumentGrotesk-Heavy.otf") format("opentype");
-    /* font-weight: 700; */
+  }
+
+
+  @font-face {
+    font-family: "Futura";
+    src: url("/fonts/Futura.ttc") format("opentype");
+  }
+
+  @font-face {
+    font-family: "Helvetica";
+    src: url("/fonts/Helvetica.ttf") format("opentype");
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: "Helvetica";
+    src: url("/fonts/Helvetica-Bold.ttf") format("opentype");
+    font-weight: 700;
   }
 
 }

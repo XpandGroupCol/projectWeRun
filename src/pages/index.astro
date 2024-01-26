@@ -51,81 +51,93 @@ import Modal from "../components-astro/modal.astro";
         <div class="flex-col justify-center items-center">
           <Carousel client:only="react" images={IMAGESCAROUSEL} />
         </div>
-        <div class="absolute bottom-[-18px] left-[50%] translate-x-[-50%]">
-          <Modal />
-        </div>
+        <img
+          class="absolute bottom-[35%] right-2 max-w-[50%]"
+          src="wellcollective/nikebras.svg"
+          alt=""
+        />
       </section>
     </header>
-    <main class="">
-      <section class="bg-third px-[30px] py-[50px]">
-        <div class="w-[100%] max-w-[450px] m-auto">
+
+    <main class="px-4 py-1 lg:px-8 lg:py-3">
+      <section class="grid text-center items-center">
+        <h1
+          class="font-futura uppercase font-extrabold
+          -tracking-[2px] lg:-tracking-[7px] text-[1.2rem] lg:text-[3rem]"
+        >
+          Nike Well Collective
+        </h1>
+        <p
+          class="font-helvetica p-4 lg:px-[10%] text-[1rem] lg:text-[1.5rem] leading-5"
+        >
+          Muévete con nosotros a través de las historias, servicios,
+          experiencias y<br /> productos que forman parte de nuestros cinco
+          pilares: movimiento, consciencia,<br /> descanso, nutrición y
+          conexión.
+        </p>
+        <Modal />
+      </section>
+      <section class="mb-10">
+        <h4
+          class="font-helvetica text-[12px] md:text-[35px] font-bold block lg:hidden"
+        >
+          Compra ahora
+        </h4>
+        <h4
+          class="font-helvetica text-[12px] md:text-[35px] font-bold hidden lg:block"
+        >
+          ¡No te lo pierdas!
+        </h4>
+        <picture>
+          <source
+            media="(min-width: 768px)"
+            srcset="wellcollective/webnike_desk.webp"
+          />
+          <img
+            class="w-[100vw]"
+            src="wellcollective/webnike.webp"
+            alt="IfItDoesntMatchAnyMedia"
+          />
+        </picture>
+      </section>
+      <section class="mb-10">
+        <h4 class="font-helvetica text-[12px] md:text-[35px] font-bold">
+          Descarga las Apps
+        </h4>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <img src="wellcollective/app01.webp" alt="" />
+          <img src="wellcollective/app02.webp" alt="" />
+        </div>
+      </section>
+      <section class="mb-10">
+        <h4 class="font-helvetica text-[12px] md:text-[35px] font-bold">
+          No te lo pierdas
+        </h4>
+        <div class="relative">
+          <img
+            class="w-[100vw] h-[100vw] sm:h-auto object-cover"
+            src="wellcollective/noperder.webp"
+            alt=""
+          />
+          <img
+            class="absolute top-2 left-2 max-w-[20%] lg:max-w-[30%]"
+            src="wellcollective/logo_nike.svg"
+            alt=""
+          />
+          <img
+            class="absolute top-2 right-2 max-w-[50%] lg:max-w-[30%]"
+            src="wellcollective/jessica.webp"
+            alt=""
+          />
+        </div>
+        <div class="">
           <div
-            class="flex max-w-[80%] m-auto justify-between items-center mb-[20px]"
+            class="flex max-w-[80%] lg:max-w-[20%] m-auto justify-between items-center mt-[20px] contrast-0"
           >
             {ICONS.map((icon) => <IconLink src={icon.src} link={icon.link} />)}
           </div>
-
-          <Spotify />
-          <h2
-            class="text-[18px] font-abc text-secondary text-center text-[2.5rem] leading-[2.5rem] md:hidden"
-          >
-            Juntos, creamos historias de éxito en cada carrera
-          </h2>
-          <h2
-            class="text-[18px] font-abc text-secondary text-center text-[2.5rem] leading-[2.5rem] hidden md:block"
-          >
-            Conoce la ubicación<br />de nuestras tiendas
-          </h2>
         </div>
       </section>
     </main>
-    <section class="bg-gradient-radial px-[30px] py-[30px] flex-col">
-      <div
-        class="flex flex-col py-[32px] w-[100%] xss:w-[80%] max-w-[450px] m-auto items-center"
-      >
-        <h2
-          class="text-[18px] font-abc text-secondary text-center text-[2.5rem] leading-[2.5rem]"
-        >
-          Nuestras líneas<br />de contacto
-        </h2>
-        <div
-          id="tiendas"
-          class="store-container flex relative hover:bg-transparent flex-col gap-[18px] pt-[28px]
-           text-center w-[80%] lg:h-auto lg:w-full text-primary justify-center items-center lg:px-[8px]"
-        >
-          {
-            LINKSTORE.map((store) => (
-              <StoreLink
-                id={store.id}
-                src={store.src}
-                src2={store.src2}
-                name={store.name}
-                link={store.link}
-              />
-            ))
-          }
-        </div>
-      </div>
-    </section>
-    <footer
-      class="flex flex-col bg-footer bg-cover bg-no-repeat bg-top h-[60vh] min-h-[350px] lg:h-[80vh]"
-    >
-      <div class="flex">
-        <Carousel client:only="react" images={IMAGESCAROUSEL} />
-      </div>
-      <div
-        class="flex flex-1 justify-center items-end w-[100%] max-w-[600px] px-[30px] m-auto"
-      >
-        <div class="md:hidden">
-          <Button text="¡Únete a nuestra comunidad!" />
-        </div>
-      </div>
-      <div class="flex">
-        <Carousel client:only="react" images={IMAGESCAROUSEL} />
-      </div>
-    </footer>
-    <section>
-      <div></div>
-    </section>
   </body>
 </html>

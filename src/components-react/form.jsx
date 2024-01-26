@@ -100,7 +100,7 @@ export default function Form({ idEvento, changeEvent, nombreEvento, changeMensaj
     return (
         <form onSubmit={submit}
             id="form_registro"
-            className="min-w-[50%]  bg-dialog-back p-6 rounded-md shadow-md font-abc"
+            className="min-w-[50%]  bg-dialog-back p-6 rounded-md font-abc"
         >
             <h1 className="text-center font-abc pt-2">
                 Completa el formulario y tu inscripción estará lista para {nombreEvento}
@@ -108,7 +108,7 @@ export default function Form({ idEvento, changeEvent, nombreEvento, changeMensaj
 
             <button type="button" onClick={() => changeEvent(-1)}
                 className="w-[50%] bg-dialog-input text-dialog-text text-xs rounded-full py-2 px-4 
-                hover:bg-primary/80 focus:outline-none focus:bg-primary mb-4">
+                hover:bg-dialog-input/20 focus:outline-none focus:bg-dialog-input mb-4">
                 Cambiar de evento</button>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-1 lg:gap-3">
@@ -125,6 +125,7 @@ export default function Form({ idEvento, changeEvent, nombreEvento, changeMensaj
                     focus:border-third color-dialog-text bg-dialog-input"
                         value={formData.cedula}
                         onChange={handleChange}
+                        required
                     />
                 </div>
 
@@ -139,6 +140,7 @@ export default function Form({ idEvento, changeEvent, nombreEvento, changeMensaj
                     focus:border-third color-dialog-text bg-dialog-input"
                         value={formData.nombre}
                         onChange={handleChange}
+                        required
                     />
                 </div>
 
@@ -153,6 +155,7 @@ export default function Form({ idEvento, changeEvent, nombreEvento, changeMensaj
                     focus:border-third color-dialog-text bg-dialog-input"
                         value={formData.correo}
                         onChange={handleChange}
+                        required
                     />
                 </div>
 
@@ -167,6 +170,7 @@ export default function Form({ idEvento, changeEvent, nombreEvento, changeMensaj
                     focus:border-third color-dialog-text bg-dialog-input"
                         value={formData.telefono}
                         onChange={handleChange}
+                        required
                     />
                 </div>
 
@@ -183,6 +187,7 @@ export default function Form({ idEvento, changeEvent, nombreEvento, changeMensaj
                     focus:border-third color-dialog-text bg-dialog-input"
                         value={formData.fecha_nacimiento}
                         onChange={handleChange}
+                        required
                     />
                 </div>
 
@@ -197,6 +202,7 @@ export default function Form({ idEvento, changeEvent, nombreEvento, changeMensaj
                     focus:border-third color-dialog-text bg-dialog-input"
                         value={formData.ciudad}
                         onChange={handleChange}
+                        required
                     />
                 </div>
 
@@ -211,6 +217,7 @@ export default function Form({ idEvento, changeEvent, nombreEvento, changeMensaj
                     focus:border-third color-dialog-text bg-dialog-input"
                         value={formData.eps}
                         onChange={handleChange}
+                        required
                     />
                 </div>
 
@@ -272,6 +279,7 @@ export default function Form({ idEvento, changeEvent, nombreEvento, changeMensaj
                     focus:border-third color-dialog-text bg-dialog-input"
                         value={formData.nombre_emergencia}
                         onChange={handleChange}
+                        required
                     />
                 </div>
 
@@ -288,6 +296,7 @@ export default function Form({ idEvento, changeEvent, nombreEvento, changeMensaj
                     focus:border-third color-dialog-text bg-dialog-input"
                         value={formData.telefono_emergencia}
                         onChange={handleChange}
+                        required
                     />
                 </div>
             </div>

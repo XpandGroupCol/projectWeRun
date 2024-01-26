@@ -15,21 +15,22 @@ import DivDialog from "../components-react/DivDialog";
         right: 0;
         bottom: 0;
         left: 0;
-        background: rgba(255, 0, 0, 0.1);
+        background: rgba(255, 255, 255, 0.4);
     }
 </style>
 
 <button
     onclick="{window.dialog.showModal()}"
-    class="flex justify-center items-center bg-primary text-secondary shadow-custom text-[1.2rem] md:text-[1.4rem] 2xl:text-[1.8rem]
-rounded-full h-auto font-abc w-auto whitespace-nowrap
-py-3 px-5 md:px-[3rem] md:py-3 2xl:px-[4rem] 2xl:py-4"
-    >¡Inscríbete al siguiente evento!
+    class="flex justify-center items-center bg-primary text-secondary text-[1.2rem] md:text-[1.4rem] 2xl:text-[1.8rem]
+rounded-full h-auto font-helvetica w-auto whitespace-nowrap font-normal	
+py-3 px-5 md:px-[3rem] md:py-3 2xl:px-[4rem] 2xl:py-4
+max-w-[50%] md:max-w-[20%] m-auto"
+    >Inscribirme
 </button>
 
 <dialog
     id=`dialog`
-    class="max-w-[85%] lg:max-w-[60%] 2xl:max-w-[45%] max-h-[70vh] lg:max-h-[50vh] rounded-xl bg-dialog-back p-2"
+    class="max-w-[85%] lg:max-w-[60%] 2xl:max-w-[45%] max-h-[70vh] lg:max-h-[70vh] rounded-xl bg-dialog-back p-2"
 >
     <!-- <Form client:load /> -->
     <DivDialog client:load />
